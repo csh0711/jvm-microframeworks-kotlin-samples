@@ -1,5 +1,5 @@
-import info.novatec.javalin.Footballer
-import info.novatec.javalin.FootballerRepository
+package info.novatec.http4k
+
 import org.http4k.core.Body
 import org.http4k.core.Method.DELETE
 import org.http4k.core.Method.GET

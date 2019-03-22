@@ -1,17 +1,14 @@
-package info.novatec.javalin
+package info.novatec.http4k
 
 import com.mongodb.MongoClient
 import com.mongodb.MongoClientURI
 import com.mongodb.client.MongoCollection
 import com.mongodb.client.model.Filters
 import com.mongodb.client.model.Filters.eq
-import org.bson.codecs.configuration.CodecRegistries
 import org.bson.codecs.configuration.CodecRegistries.fromProviders
 import org.bson.codecs.configuration.CodecRegistries.fromRegistries
-import org.bson.codecs.pojo.Conventions
 import org.bson.codecs.pojo.PojoCodecProvider
 import org.bson.types.ObjectId
-import java.util.*
 
 
 class FootballerRepository {

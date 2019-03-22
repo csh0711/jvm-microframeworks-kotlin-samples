@@ -1,4 +1,4 @@
-package info.novatec.javalin
+package info.novatec.http4k
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import org.bson.codecs.pojo.annotations.BsonCreator
