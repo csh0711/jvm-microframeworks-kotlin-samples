@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: info.novatec
+---
+testFramework: spek
+sourceLanguage: kotlin
