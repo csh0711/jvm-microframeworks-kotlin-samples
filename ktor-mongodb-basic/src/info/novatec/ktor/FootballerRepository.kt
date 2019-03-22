@@ -13,7 +13,7 @@ import org.bson.types.ObjectId
 
 class FootballerRepository {
 
-    var mongoClient = MongoClient(MongoClientURI("mongodb://localhost:27017"))
+    private val mongoClient = MongoClient(MongoClientURI("mongodb://localhost:27017"))
 
 
     fun find(): List<Footballer> {
