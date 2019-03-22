@@ -1,17 +1,20 @@
 package info.novatec.ktor
 
+import org.litote.kmongo.coroutine.CoroutineFindPublisher
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.reactivestreams.KMongo
 
 
 class FootballerRepository {
 
-    val mongoClient = KMongo.createClient().coroutine
+    private val mongoClient = KMongo.createClient().coroutine
+    private val database = mongoClient.getDatabase("footballmanager")
+    private val collection = database.getCollection<Footballer>()
 
+    suspend fun find(): List<Footballer> {
+        return collection.find().toList()
+    }
 
-//    fun find(): List<Footballer> {
-//        return getCollection().find().toList()
-//    }
 //
 //    fun find(_id: String): Footballer? {
 //        return getCollection().find(eq("_id", ObjectId(_id))).first()

@@ -33,6 +33,5 @@ fun Application.module() {
 
 // TODO
 // - Location
-// - coroutines
 // - KMongo
 // - Tests
