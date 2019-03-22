@@ -16,7 +16,7 @@ import java.util.*
 
 class FootballerRepository {
 
-    var mongoClient = MongoClient(MongoClientURI("mongodb://localhost:27017"))
+    private val mongoClient = MongoClient(MongoClientURI("mongodb://localhost:27017"))
 
 
     fun find(): List<Footballer> {
