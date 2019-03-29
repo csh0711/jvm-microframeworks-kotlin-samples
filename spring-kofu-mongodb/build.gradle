@@ -5,16 +5,12 @@ plugins {
 group 'info.novatec.spring-fu'
 version '1.0-SNAPSHOT'
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile "org.springframework.fu:spring-fu-kofu:0.0.5"
     compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
-    //compile "org.springframework.boot:spring-boot-starter-web:2.1.2.RELEASE"
-    compile "org.springframework.boot:spring-boot-starter-webflux:2.1.2.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-webflux:2.1.1.BUILD-SNAPSHOT"
+    compile "org.springframework.boot:spring-boot-starter-data-mongodb-reactive:2.1.1.BUILD-SNAPSHOT"
 }
 
 repositories {
