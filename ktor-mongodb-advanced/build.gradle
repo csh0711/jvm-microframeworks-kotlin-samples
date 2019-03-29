@@ -36,5 +36,6 @@ dependencies {
     compile "io.ktor:ktor-locations:$ktor_version"
     compile "io.ktor:ktor-jackson:$ktor_version"
     compile "org.litote.kmongo:kmongo-coroutine:$kmongo_version"
+//    implementation 'org.kodein.di:kodein-di-generic-jvm:6.1.0'
     testCompile "io.ktor:ktor-server-tests:$ktor_version"
 }

@@ -1,7 +1,8 @@
 package info.novatec.ktor
 
-import org.litote.kmongo.coroutine.CoroutineFindPublisher
+import org.bson.types.ObjectId
 import org.litote.kmongo.coroutine.coroutine
+import org.litote.kmongo.eq
 import org.litote.kmongo.reactivestreams.KMongo
 
 
@@ -15,29 +16,17 @@ class FootballerRepository {
         return collection.find().toList()
     }
 
-//
-//    fun find(_id: String): Footballer? {
-//        return getCollection().find(eq("_id", ObjectId(_id))).first()
-//    }
-//
-//    fun insert(footballer: Footballer): Footballer {
-//        footballer.id = ObjectId()
-//        getCollection().insertOne(footballer)
-//        return footballer
-//    }
-//
-//    fun delete(_id: String) {
-//        getCollection().deleteOne(Filters.eq("_id", ObjectId(_id)))
-//    }
-//
-//    private fun getCollection(): MongoCollection<Footballer> {
-//        val codecRegistry = fromRegistries(
-//            MongoClient.getDefaultCodecRegistry(),
-//            fromProviders(PojoCodecProvider.builder().automatic(true).build())
-//        )
-//        return mongoClient
-//            .getDatabase("footballmanager")
-//            .withCodecRegistry(codecRegistry)
-//            .getCollection("footballer", Footballer::class.java)
-//    }
+    suspend fun find(_id: String): Footballer? {
+        return collection.findOne(Footballer::id eq _id)
+    }
+
+    suspend fun insert(footballer: Footballer): Footballer {
+        footballer.id = ObjectId().toString()
+        collection.insertOne(footballer)
+        return footballer
+    }
+
+    suspend fun delete(_id: String) {
+        collection.deleteOne(Footballer::id eq _id)
+    }
 }
