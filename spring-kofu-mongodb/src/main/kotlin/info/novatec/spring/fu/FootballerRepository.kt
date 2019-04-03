@@ -20,6 +20,5 @@ class FootballerRepository(
     fun insert(footballer: Mono<Footballer>) = mongo.save(footballer)
 
     fun delete(_id: String) =
-        mongo.remove(query(where("_id").`is`(_id)), Footballer::class).subscribe()
-
+        mongo.remove<Footballer>(query(where("_id").`is`(_id))).subscribe()
 }
