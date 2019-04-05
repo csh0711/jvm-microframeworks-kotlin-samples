@@ -10,7 +10,6 @@ import org.bson.codecs.configuration.CodecRegistries.fromRegistries
 import org.bson.codecs.pojo.PojoCodecProvider
 import org.bson.types.ObjectId
 
-
 class FootballerRepository {
 
     private val mongoClient = MongoClient(MongoClientURI("mongodb://localhost:27017"))
