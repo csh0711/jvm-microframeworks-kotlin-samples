@@ -9,27 +9,30 @@ fun main() {
     val repository = FootballerRepository()
 
     app.routes {
-        get("/footballers") { ctx ->
-            ctx.json(repository.find())
-        }
+        path("/footballers") {
 
-        get("/footballers/:_id") { ctx ->
-            val footballer = repository.find(ctx.pathParam("_id"))
-            footballer?.let {
-                ctx.json(footballer)
-            } ?: ctx.status(404)
-        }
+            get("/") { ctx ->
+                ctx.json(repository.find())
+            }
 
-        post("/footballers/") { ctx ->
-            val footballer = ctx.body<Footballer>()
-            val insertedFootballer = repository.insert(footballer)
-            ctx.json(insertedFootballer)
-            ctx.status(201)
-        }
+            get("/:_id") { ctx ->
+                val footballer = repository.find(ctx.pathParam("_id"))
+                footballer?.let {
+                    ctx.json(it)
+                } ?: ctx.status(404)
+            }
 
-        delete("/footballers/:_id") { ctx ->
-            repository.delete(ctx.pathParam("_id"))
-            ctx.status(204)
+            post("/") { ctx ->
+                val footballer = ctx.body<Footballer>()
+                val insertedFootballer = repository.insert(footballer)
+                ctx.json(insertedFootballer)
+                ctx.status(201)
+            }
+
+            delete("/:_id") { ctx ->
+                repository.delete(ctx.pathParam("_id"))
+                ctx.status(204)
+            }
         }
     }
 }
