@@ -47,29 +47,29 @@ Within this database a collection `footballer` should provide documents of this 
 
 #### Micronaut
 
-* See [micronaut-kotlin-mongodb](../tree/master/micronaut-kotlin-mongodb)
+* See [micronaut-kotlin-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/micronaut-kotlin-mongodb)
 
 #### Javalin
 
-* See [javalin-kotlin-mongodb](../tree/master/javalin-kotlin-mongodb)
+* See [javalin-kotlin-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/javalin-kotlin-mongodb)
 
 #### Spring Fu
 
-* See [spring-kofu-mongodb](../tree/master/spring-kofu-mongodb)
+* See [spring-kofu-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/spring-kofu-mongodb)
 
 #### Ktor (basic example)
 
-* See [ktor-mongodb-basic](../tree/master/ktor-mongodb-basic)
+* See [ktor-mongodb-basic](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/ktor-mongodb-basic)
 
 #### Ktor (advanced example)
 
-* See [ktor-mongodb-advanced](../tree/master/ktor-mongodb-advanced)
+* See [ktor-mongodb-advanced](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/ktor-mongodb-advanced)
 
 #### http4k
 
-* See [http4k-mongodb](../tree/master/http4k-mongodb)
+* See [http4k-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/http4k-mongodb)
 
 
 #### Spark
 
-* See [spark-kotlin-mongodb](../tree/master/spark-kotlin-mongodb)
+* See [spark-kotlin-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/spark-kotlin-mongodb)
