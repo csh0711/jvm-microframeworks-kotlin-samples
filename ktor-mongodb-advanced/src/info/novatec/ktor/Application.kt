@@ -20,7 +20,3 @@ fun Application.module() {
         footballerRoutes()
     }
 }
-
-// TODO
-// - Dependency Injection (KODEIN?)
-// - Tests

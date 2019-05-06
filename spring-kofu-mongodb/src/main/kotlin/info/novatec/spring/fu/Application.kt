@@ -23,11 +23,10 @@ val app = webApplication {
 
         router {
             val footballerHandler = ref<FootballerHandler>()
-
-            GET("/footballers", footballerHandler::findAll)
-            GET("/footballers/{_id}", footballerHandler::findOne)
-            POST("/footballers", footballerHandler::insert)
-            DELETE("/footballers/{_id}", footballerHandler::delete)
+                GET("/footballers", footballerHandler::findAll)
+                GET("/footballers/{_id}", footballerHandler::findOne)
+                POST("/footballers", footballerHandler::insert)
+                DELETE("/footballers/{_id}", footballerHandler::delete)
         }
     }
 }

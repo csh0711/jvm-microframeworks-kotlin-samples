@@ -39,3 +39,13 @@ dependencies {
 //    implementation 'org.kodein.di:kodein-di-generic-jvm:6.1.0'
     testCompile "io.ktor:ktor-server-tests:$ktor_version"
 }
+
+jar {
+    manifest {
+        attributes "Main-Class": "info.novatec.ktor.ApplicationKt"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

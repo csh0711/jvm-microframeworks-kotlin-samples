@@ -17,6 +17,16 @@ dependencies {
     compile "org.mongodb:mongo-java-driver:3.10.1"
 }
 
+jar {
+    manifest {
+        attributes "Main-Class": "info.novatec.javalin.MainKt"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
