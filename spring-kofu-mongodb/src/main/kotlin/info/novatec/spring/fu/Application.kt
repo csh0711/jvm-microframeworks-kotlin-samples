@@ -1,21 +1,23 @@
 package info.novatec.spring.fu
 
-import org.springframework.fu.kofu.mongo.mongodb
-import org.springframework.fu.kofu.web.server
-import org.springframework.fu.kofu.webApplication
+import org.springframework.boot.WebApplicationType
+import org.springframework.fu.kofu.application
+import org.springframework.fu.kofu.mongo.reactiveMongodb
+import org.springframework.fu.kofu.webflux.webFlux
 
-val app = webApplication {
+val app = application(WebApplicationType.REACTIVE)  {
 
     beans {
         bean<FootballerHandler>()
         bean<FootballerRepository>()
     }
 
-    mongodb {
+    reactiveMongodb {
         uri = "mongodb://localhost:27017/footballmanager"
     }
 
-    server {
+    webFlux {
+        port = 8080
         codecs {
             string()
             jackson()
