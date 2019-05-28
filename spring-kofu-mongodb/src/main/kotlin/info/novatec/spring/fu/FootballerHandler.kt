@@ -14,12 +14,12 @@ class FootballerHandler(
 
     fun findAll(request: ServerRequest) = ServerResponse
         .ok()
-        .contentType(MediaType.APPLICATION_JSON_UTF8)
+        .contentType(MediaType.APPLICATION_JSON)
         .body(repository.find())
 
     fun findOne(request: ServerRequest) = ServerResponse
         .ok()
-        .contentType(MediaType.APPLICATION_JSON_UTF8)
+        .contentType(MediaType.APPLICATION_JSON)
         .body(repository.find(request.pathVariables()["_id"]!!))
 
     fun insert(request: ServerRequest): Mono<ServerResponse> {
@@ -30,7 +30,7 @@ class FootballerHandler(
         )
         return ServerResponse
             .ok()
-            .contentType(MediaType.APPLICATION_JSON_UTF8)
+            .contentType(MediaType.APPLICATION_JSON)
             .body(insertedFootballer)
     }
 
