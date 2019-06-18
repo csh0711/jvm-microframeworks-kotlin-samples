@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.31'
 }
 
 group 'info.novatec.javalin'
@@ -11,10 +11,10 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile "io.javalin:javalin:2.8.0"
-    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
-    compile "org.slf4j:slf4j-simple:1.7.25"
-    compile "org.mongodb:mongo-java-driver:3.10.1"
+    compile "io.javalin:javalin:3.0.0"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9"
+    compile "org.slf4j:slf4j-simple:1.7.26"
+    compile "org.mongodb:mongo-java-driver:3.10.2"
 }
 
 jar {
