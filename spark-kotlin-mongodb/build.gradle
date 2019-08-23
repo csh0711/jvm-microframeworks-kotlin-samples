@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.3.21'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.50'
 }
 
 group 'info.novatec.spark'
@@ -11,10 +11,20 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile "com.sparkjava:spark-core:2.5.4"
-    compile "org.slf4j:slf4j-simple:1.7.25"
-    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
-    compile "org.mongodb:mongo-java-driver:3.10.1"
+    compile "com.sparkjava:spark-core:2.9.1"
+    compile "org.slf4j:slf4j-simple:1.7.28"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9"
+    compile "org.mongodb:mongo-java-driver:3.11.0"
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "info.novatec.spark.MainKt"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 compileKotlin {

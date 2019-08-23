@@ -1,6 +1,6 @@
+package info.novatec.spark
+
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import info.novatec.javalin.Footballer
-import info.novatec.javalin.FootballerRepository
 import spark.Spark.*
 
 
@@ -11,9 +11,9 @@ fun main() {
     path("/footballers") {
         port(8080)
 
-        after("/*") {req, res ->  res.type("application/json")}
+        after("/*") {_, res ->  res.type("application/json")}
 
-        get("/") { req, res ->
+        get("/") { _, res ->
             res.type("application/json")
             jacksonObjectMapper().writeValueAsString(repository.find())
         }
