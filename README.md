@@ -19,8 +19,8 @@ Within this database a collection `footballer` should provide documents of this 
 ```
 {
   "_id" : ObjectId("5cc2d46f8735870692375404"),
-  "firstName" : "Neuer",
-  "lastName" : "Manuel",
+  "firstName" : "Manuel",
+  "lastName" : "Neuer",
   "position" : "Goalkeeper"
 }
 {
