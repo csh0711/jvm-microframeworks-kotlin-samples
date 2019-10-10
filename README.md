@@ -55,7 +55,7 @@ Within this database a collection `footballer` should provide documents of this 
 
 #### Spring Fu
 
-* See [spring-kofu-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/spring-kofu-mongodb)
+* See [spring-kofu-webflux-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/spring-kofu-webflux-mongodb)
 
 #### Ktor (basic example)
 
