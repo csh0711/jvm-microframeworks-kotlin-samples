@@ -20,7 +20,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom 'io.micronaut:micronaut-bom:1.2.2'
+        mavenBom 'io.micronaut:micronaut-bom:1.2.3'
     }
 }
 
@@ -36,7 +36,7 @@ dependencies {
     kapt "io.micronaut:micronaut-validation"
     kaptTest "io.micronaut:micronaut-inject-java"
     runtime "ch.qos.logback:logback-classic:1.2.3"
-    runtime "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9"
+    runtime "com.fasterxml.jackson.module:jackson-module-kotlin:2.10.0"
     testCompile "de.flapdoodle.embed:de.flapdoodle.embed.mongo:2.0.1"
     testCompile "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testCompile "org.jetbrains.spek:spek-api:${spekVersion}"
