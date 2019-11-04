@@ -57,13 +57,14 @@ Within this database a collection `footballer` should provide documents of this 
 
 * See [spring-kofu-webflux-mongodb](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/spring-kofu-webflux-mongodb)
 
-#### Ktor (basic example)
-
-* See [ktor-mongodb-basic](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/ktor-mongodb-basic)
-
 #### Ktor (advanced example)
 
 * See [ktor-mongodb-advanced](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/ktor-mongodb-advanced)
+
+
+#### Ktor (basic example)
+
+* See [ktor-mongodb-basic](https://github.com/csh0711/jvm-microframeworks-kotlin-samples/tree/master/ktor-mongodb-basic)
 
 #### http4k
 
