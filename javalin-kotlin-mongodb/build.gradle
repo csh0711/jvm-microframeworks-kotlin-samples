@@ -11,10 +11,10 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile "io.javalin:javalin:3.5.0"
-    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.9"
+    compile "io.javalin:javalin:3.6.0"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.10.0"
     compile "org.slf4j:slf4j-simple:1.7.28"
-    compile "org.mongodb:mongo-java-driver:3.11.0"
+    compile "org.mongodb:mongo-java-driver:3.11.1"
 }
 
 jar {
