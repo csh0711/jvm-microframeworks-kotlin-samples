@@ -1,16 +1,20 @@
 package info.novatec
 
-import com.mongodb.MongoClient
+import com.mongodb.MongoClientSettings
+import com.mongodb.client.MongoClient
 import com.mongodb.client.MongoCollection
 import com.mongodb.client.model.Filters.eq
+import org.bson.UuidRepresentation.JAVA_LEGACY
+import org.bson.codecs.UuidCodec
 import org.bson.codecs.configuration.CodecRegistries.*
 import org.bson.codecs.pojo.PojoCodecProvider
 import org.bson.types.ObjectId
+import java.util.*
 import javax.inject.Singleton
 
 @Singleton
 class FootballerRepository(
-        private val mongoClient: MongoClient
+    private val mongoClient: MongoClient
 ) {
 
     fun find(): List<Footballer> {
@@ -33,13 +37,13 @@ class FootballerRepository(
 
     private fun getCollection(): MongoCollection<Footballer> {
         val codecRegistry = fromRegistries(
-                MongoClient.getDefaultCodecRegistry(),
-                fromProviders(PojoCodecProvider.builder().automatic(true).build())
+            // fromCodecs(UuidCodec(JAVA_LEGACY)), // currently not needed as we use an ObjectId for _id and not an UUID
+            MongoClientSettings.getDefaultCodecRegistry(),
+            fromProviders(PojoCodecProvider.builder().automatic(true).build())
         )
         return mongoClient
-                .getDatabase("footballmanager")
-                .withCodecRegistry(codecRegistry)
-                .getCollection("footballer", Footballer::class.java)
+            .getDatabase("footballmanager")
+            .withCodecRegistry(codecRegistry)
+            .getCollection("footballer", Footballer::class.java)
     }
-
 }
